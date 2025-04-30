@@ -1,12 +1,12 @@
 body {
     background-color: #F9FAFB;
     color: #111827;
-    margin: 0;
+    /* margin: 0; */
     line-height: 1.6;
 }
 
 button {
-    /* background-color: #2C3E50; */
+    background-color: #4F46E5;
     color: white;
     padding: 10px 24px;
     border: none;
@@ -95,48 +95,6 @@ button:hover {
 .card-icon {
     font-size: 36px;
 }
-
-/* Login Page */
-.login-container {
-    min-height: 100vh;
-    background-color: #F9FAFB;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-}
-
-.login-box {
-    background-color: #ffffff;
-    padding: 40px 30px;
-    border-radius: 16px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    max-width: 400px;
-    text-align: center;
-}
-
-.login-box h2 {
-    margin-bottom: 24px;
-    color: #4F46E5;
-}
-
-.login-form input,
-.login-form select {
-    width: 100%;
-    padding: 12px;
-    margin-bottom: 16px;
-    border: 1px solid #D1D5DB;
-    border-radius: 8px;
-    font-size: 16px;
-}
-
-.login-form button {
-    width: 100%;
-    padding: 12px;
-    border-radius: 8px;
-}
-
 
 /* Sidebar Layout */
 .dashboard-layout {

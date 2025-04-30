@@ -17,7 +17,7 @@ export default function Home() {
                 </p>
                 <button
                     onClick={() => navigate('/login')}
-                    className="bg-[#4F46E5] hover:bg-[#4338CA] text-white font-semibold py-2 px-6 rounded-2xl transition duration-300 shadow-md"
+                    className="bg-[#4F46E5] hover:bg-[#4338CA] text-white font-semibold py-2 px-6 rounded-2xl transition duration-300 shadow-md hover:translate-[-2px]"
                 >
                     Login
                 </button>
