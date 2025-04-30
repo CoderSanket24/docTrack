@@ -6,12 +6,12 @@ export default function Home() {
     const navigate = useNavigate();
 
     return (
-        <div className="min-h-screen bg-[#F9FAFB] flex flex-col items-center justify-center p-6">
-            <div className="max-w-3xl text-center">
+        <div className="w-full h-full bg-[url(./home.jpg)] bg-cover flex flex-col justify-start pt-8 pl-64">
+            <div className="max-w-3xl text-start">
                 <h1 className="text-4xl font-bold text-[#4F46E5] mb-4">
                     Welcome to DocuFlow
                 </h1>
-                <p className="text-lg text-[#6B7280] mb-6">
+                <p className="text-lg text-[#34495E] mb-6">
                     DocuFlow is a secure and smart Document Management and Tracking System
                     for managing leave permission workflows.
                 </p>
