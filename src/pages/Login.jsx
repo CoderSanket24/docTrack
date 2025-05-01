@@ -15,8 +15,8 @@ export default function Login() {
     };
 
     return (
-        <div className="bg-[#F9FAFB]">
-            <div className="bg-[#fff] py-[40px] px-[30px] rounded-2xl w-full max-w-[400px] text-center shadow-[0px_10px_20px_rgba(0,0,0,0.1)]">
+        <div className="bg-[#F9FAFB] min-h-screen flex justify-center items-center ">
+            <div className="bg-[#fff] py-[40px] px-[30px] rounded-2xl w-full max-w-[400px] text-center shadow-[0px_10px_20px_rgba(0,0,0,0.1)] self">
                 <h2 className='mb-6 text-[#4F46E5]'>Login to DocuFlow</h2>
                 <form onSubmit={handleSubmit} className="login-form">
                     <input
@@ -41,7 +41,7 @@ export default function Login() {
                         <option value="HR">HR</option>
                         <option value="Director">Director</option>
                     </select>
-                    <button type="submit" className='w-full p-3 rounded-b-lg'>Login</button>
+                    <button type="submit" className='w-full cssbutton'>Login</button>
                 </form>
             </div>
         </div>

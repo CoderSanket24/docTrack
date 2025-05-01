@@ -4,7 +4,6 @@ import { useEffect, useState } from 'react';
 export default function Dashboard() {
     const navigate = useNavigate();
     const [role, setRole] = useState('');
-    const [collapsed, setCollapsed] = useState(false);
 
     useEffect(() => {
         const userRole = localStorage.getItem('role');
@@ -67,30 +66,26 @@ export default function Dashboard() {
     ];
 
     return (
-        <div className={`dashboard-layout ${collapsed ? 'collapsed' : ''}`}>
-            <aside className="sidebar">
-                <button className="collapse-toggle" onClick={() => setCollapsed(!collapsed)}>
-                    {collapsed ? '➡️' : '⬅️'}
+        <div className={`flex h-screen p-2`}>
+            <aside className="w-2xs bg-[#4F46E5] text-[#fff] rounded-2xl mr-2 flex flex-col align-middle py-6 px-4">
+                <h1 className="text-2xl font-bold mb-6">DocuFlow</h1>
+                <div className="bg-[#6366F1] px-3 py-1.5 rounded-full text-[14px] mb-6 capitalize">{role}</div>
+                <button className="mt-auto py-2.5 px-5 rounded-lg bg-[#EF4444] text-[#fff] border-none font-semibold cursor-pointer hover:bg-[#dc2626]" onClick={handleLogout}>
+                    Logout
                 </button>
-                {!collapsed && <h1 className="logo">DocuFlow</h1>}
-                {!collapsed && <div className="sidebar-role">{role}</div>}
-                {!collapsed && (
-                    <button className="logout-button" onClick={handleLogout}>
-                        Logout
-                    </button>
-                )}
+
             </aside>
 
-            <main className="main-content">
-                <h2 className="welcome">Welcome, {role} 👋</h2>
-                <div className="card-grid">
+            <main className="flex-1 p-8 bg-[#F9FAFB] overflow-auto">
+                <h2 className="text-2xl text-[#111827] mb-5">Welcome, {role} 👋</h2>
+                <div className="grid grid-cols-[auto-fill_minmax(260px,1fr)] gap-5">
                     {cards
                         .filter((card) => card.roles.includes(role))
                         .map((card, index) => (
-                            <div className="dashboard-card" key={index}>
-                                <div className="card-icon">{card.icon}</div>
-                                <h3>{card.title}</h3>
-                                <p>{card.description}</p>
+                            <div className="bg-[#fff] p-6 rounded-[12px] shadow-[0_8px_12px_rgba(0,0,0,0.04)] transition-transform duration-200 ease-in hover:translate-y-[-4px]" key={index}>
+                                <div className="text-4xl">{card.icon}</div>
+                                <h3 className='text-[18px] mt-3 text-[#4F46E5]'>{card.title}</h3>
+                                <p className='text-[14px] mt-2 text-[#6B7280]'>{card.description}</p>
                             </div>
                         ))}
                 </div>

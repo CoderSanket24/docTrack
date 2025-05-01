@@ -6,17 +6,28 @@
   box-sizing: border-box;
 }
 
-html,
-body {
-  width: 100%;
-  height: 100%;
+#root {
+  background-color: #F9FAFB;
+  color: #111827;
+  line-height: 1.6;
 }
 
-#root {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
+.cssbutton {
+  background-color: #4F46E5;
+  color: white;
+  padding: 10px 24px;
+  border: none;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.cssbutton:hover {
+  background-color: #4338CA;
+  transform: translateY(-2px);
 }
 
 /* Scrollbar styling */

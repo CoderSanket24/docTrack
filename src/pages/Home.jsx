@@ -6,7 +6,7 @@ export default function Home() {
     const navigate = useNavigate();
 
     return (
-        <div className="w-full h-full bg-[url(./home.jpg)] bg-cover flex flex-col justify-start pt-8 pl-64">
+        <div className="w-full h-screen bg-[url(./home.jpg)] bg-cover flex flex-col justify-start pt-8 pl-64">
             <div className="max-w-3xl text-start">
                 <h1 className="text-4xl font-bold text-[#4F46E5] mb-4">
                     Welcome to DocuFlow
