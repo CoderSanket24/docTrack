@@ -20,6 +20,10 @@ export default function Dashboard() {
         navigate('/login');
     };
 
+    const handleClick = () => {
+        navigate('/Notifications')
+    };
+
     const cards = [
         {
             title: 'Submit Leave Application',
@@ -78,7 +82,7 @@ export default function Dashboard() {
 
             <main className="flex-1 p-8 bg-[#F9FAFB] overflow-auto">
                 <h2 className="text-2xl text-[#111827] mb-5">Welcome, {role} 👋</h2>
-                <div className="grid grid-cols-[auto-fill_minmax(260px,1fr)] gap-5">
+                <div className="grid grid-cols-[auto-fill_minmax(260px,1fr)] gap-5" onClick={handleClick}>
                     {cards
                         .filter((card) => card.roles.includes(role))
                         .map((card, index) => (
