@@ -1,5 +1,6 @@
 import { useNavigate } from 'react-router-dom';
 import { useEffect, useState } from 'react';
+import Sidebar from '../components/Sidebar';
 
 export default function Dashboard() {
     const navigate = useNavigate();
@@ -18,10 +19,6 @@ export default function Dashboard() {
     const handleLogout = () => {
         localStorage.removeItem('role');
         navigate('/login');
-    };
-
-    const handleClick = () => {
-        navigate('/Notifications')
     };
 
     const cards = [
@@ -71,18 +68,11 @@ export default function Dashboard() {
 
     return (
         <div className={`flex h-screen p-2`}>
-            <aside className="w-2xs bg-[#4F46E5] text-[#fff] rounded-2xl mr-2 flex flex-col align-middle py-6 px-4">
-                <h1 className="text-2xl font-bold mb-6">DocuFlow</h1>
-                <div className="bg-[#6366F1] px-3 py-1.5 rounded-full text-[14px] mb-6 capitalize">{role}</div>
-                <button className="mt-auto py-2.5 px-5 rounded-lg bg-[#EF4444] text-[#fff] border-none font-semibold cursor-pointer hover:bg-[#dc2626]" onClick={handleLogout}>
-                    Logout
-                </button>
-
-            </aside>
+            <Sidebar role={role} handleLogout={handleLogout} />
 
             <main className="flex-1 p-8 bg-[#F9FAFB] overflow-auto">
                 <h2 className="text-2xl text-[#111827] mb-5">Welcome, {role} 👋</h2>
-                <div className="grid grid-cols-[auto-fill_minmax(260px,1fr)] gap-5" onClick={handleClick}>
+                {/* <div className="grid grid-cols-[auto-fill_minmax(260px,1fr)] gap-5">
                     {cards
                         .filter((card) => card.roles.includes(role))
                         .map((card, index) => (
@@ -92,7 +82,7 @@ export default function Dashboard() {
                                 <p className='text-[14px] mt-2 text-[#6B7280]'>{card.description}</p>
                             </div>
                         ))}
-                </div>
+                </div> */}
             </main>
         </div>
     );
